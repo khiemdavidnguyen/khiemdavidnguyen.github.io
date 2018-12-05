@@ -1,0 +1,70 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>Edit this pet</h1>
+		</div>
+	</div>
+
+	<form (submit)='editProduct()'>
+		<table>
+			<tr>
+				<td>
+					<p>Name:</p>
+				</td>
+				<td>
+					<input type="text" name="product.name" [(ngModel)]='product.name' type="text" name="email" required minlength="4" maxlength="24"  #titles="ngModel">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Pet Type:</p>
+				</td>
+				<td>
+					<input type="text" name="product.type" [(ngModel)]='product.type'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Description:</p>
+				</td>
+				<td>
+					<input type="text" name="product.description" [(ngModel)]='product.description'>
+				</td>
+			</tr>
+			<p>Skills (optional):</p>
+			<tr>
+				<td>
+					<p>Skill 1:</p>
+				</td>
+				<td>
+					<input type="text" name="product.skill1" [(ngModel)]='product.skill1'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Skill 2:</p>
+				</td>
+				<td>
+					<input type="text" name="product.skill2" [(ngModel)]='product.skill2'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Skill 3:</p>
+				</td>
+				<td>
+					<input type="text" name="product.skill3" [(ngModel)]='product.skill3'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="btn-primary" type="submit" value="Edit Pet" [disabled]='!titles.valid'>
+				</td>
+				<td>
+					<button class="btn-warning" [routerLink]="['/pets', product._id]" >Cancel</button>
+				</td>
+
+			</tr>
+		</table>
+	</form>
+</div>

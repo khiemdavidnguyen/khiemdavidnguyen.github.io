@@ -1,0 +1,17 @@
+<a class="nav-link" [routerLink]="['/pets']">Home</a>
+<h1> Details about {{product.name}} <h1>
+
+<h1> Pet Type </h1>
+    <h6> {{ product.type }} </h6>
+
+<h1> Description </h1>
+    <h6> {{ product.description }} </h6>
+
+<h1> Skills </h1>
+    <h6> {{ product.skill1 }} </h6>
+    <h6> {{ product.skill2 }} </h6>
+    <h6> {{ product.skill3 }} </h6>
+
+<button (click)='deleteProduct(product)' class="btn-danger">Adopt a Pet</button>
+
+<router-outlet></router-outlet>

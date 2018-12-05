@@ -1,0 +1,70 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1>Know of a pet needing a home?</h1>
+		</div>
+	</div>
+	<p *ngIf='err'>{{err.err.errors.message}} </p>
+	<form (submit)='createProduct()'>
+		<table>
+			<tr>
+				<td>
+					<p>Name:</p>
+				</td>
+				<td>
+					<input type="text" name="product.name" [(ngModel)]='product.name'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Type:</p>
+				</td>
+				<td>
+					<input type="text" name="product.type" [(ngModel)]='product.type'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Description:</p>
+				</td>
+				<td>
+					<input type="text" name="product.description" [(ngModel)]='product.description'>
+				</td>
+			</tr>
+			<p>Skills:</p>
+			<tr>
+				<td>
+					<p>Skill 1:</p>
+				</td>
+				<td>
+					<input type="text" name="product.skill1" [(ngModel)]='product.skill1'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Skill 2:</p>
+				</td>
+				<td>
+					<input type="text" name="product.skill2" [(ngModel)]='product.skill2'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Skill 3:</p>
+				</td>
+				<td>
+					<input type="text" name="product.skill3" [(ngModel)]='product.skill3'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input class="btn-success" type="submit" value="Create">
+				</td>
+				<td>
+					<button class="btn-danger" [routerLink]="['/pets']" >Cancel</button>
+				</td>
+
+			</tr>
+		</table>
+	</form>
+</div>

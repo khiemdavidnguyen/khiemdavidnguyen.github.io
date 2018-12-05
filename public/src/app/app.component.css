@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|Chakra+Petch|Ubuntu');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header {
+    text-align: center;
+    font-family: Ubuntu, sans-serif;
+    padding: 10px 0;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0080FF;
+    top: 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+    border-right: 2px solid white;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Chakra Petch, sans-serif;
+}
+
+li a:hover {
+    background-color: white;
+    color: #0080FF;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+#home {
+    text-align: center;
+    padding-top: 10px;
+    font-family: Chakra Petch, sans-serif;
+}
+#home > img {
+    border: solid 5px #0080FF;
+    border-radius: 50%;
+}
+#home > h2 {
+    background-color: #0080FF;
+    color: white;
+    padding: 5px 0;
+}
